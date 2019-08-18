@@ -125,6 +125,6 @@ app.get('/phone/:id',(rq,rs)=>{
     rs.render('phone',{products:prod[x],title:"Mobiles"});
 });
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT||4000,()=>{
     console.log("server running on 4000")
 });
