@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <nav class="navbar navbar-dark bg-dark ">
+                <table>
+                    <tr>
+                    <%for(var i=0;i<nav.length;i++){%>
+                    <td><button type="button" class="btn btn-light">
+                     <a href="<%= nav[i].link%>"><%=nav[i].title%></a>
+                    </td> </button>  
+                   <%}%>
+                </tr>
+            </table>
+              </nav>
+               <div class="container">
+              <div class="jumbotron">
+                    <h1 class="display-4">Welcome to Beecart!</h1>
+                    <p class="lead">Digital era shopping redefined.</p>
+                    <hr class="my-4">
+                
+                    <a class="btn btn-primary btn-lg" href="/products" role="button">Click to enter</a>
+                  </div>
+               </div>
+    
+</body>
+</html>
