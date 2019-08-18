@@ -31,13 +31,13 @@ prod=[{
         price:"₹ 55,900",
         picture:"/images/s10.jpg",
         release:"2019"
-       }
+       },
+
+    
 
 
 
-];
-
-prod1=[{ 
+{ 
     model:"OPPO F11",
     disp:"4 GB RAM | 128 GB ROM",
     price:"₹17,990",
@@ -91,13 +91,14 @@ app.get('/',(rq,rs)=>{
 });
 
 app.get('/products',(rq,rs)=>{
-      rs.render('products',{title:"products",prod,prod1});
+      rs.render('products',{title:"products",prod});
 });
 
 app.get('/phone/:id',(rq,rs)=>{
 
     const x= rq.params.id;
-    rs.render('phone',{products:prod[x],products:prod1[x],title:"Mobiles"});
+    
+    rs.render('phone',{products:prod[x],title:"Mobiles"});
 });
 
 app.listen(4000,()=>{
