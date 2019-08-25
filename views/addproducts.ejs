@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel='stylesheet' href='/css/style.css'>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <table>
+         <tr>
+           <%for(i=0;i<nav.length;i++){%>
+               <td><button  class="btn btn-light">
+                <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
+               </td></button>
+
+           <%}%>
+
+        </tr>
+    </table>  
+</nav>
+
+<div class="container">
+    <div class="row">
+        <form action="read" method="POST" class="form">
+            <table class="table">
+                <tr><td>model:</td><td><input type="text" name="model" class="form-control"/></td></tr>
+                <tr><td>disp:</td><td><input type="text" name="disp"class="form-control"/></td></tr>
+                <tr><td>price:</td><td><input type="text" name="price"class="form-control"/></td></tr>
+                <tr><td>picture:</td><td><input type="text"name="picture"class="form-control"/></td></tr>
+                <tr><td>description:</td><td><input type="text"name="des" class="form-control"/></td></tr>
+                <tr><td>review1:</td><td><input type="text-area"name="r1" class="form-control"/></td></tr>
+                <tr><td>review2:</td><td><input type="text-area"name="r2" class="form-control"/></td></tr>
+                <tr><td><button type="reset" class="btn btn-warning" name="reset">RESET</button></td>
+                    <td><button type="submit" class="btn btn-success" name="submit" >SUBMIT</button></td>
+            </tr>
+            </table>                                                               <!-- <table class="table">
+                                                                                                model:"Honor 8x",
+                                                                                            disp:"6.5 Notch display",
+                                                                                                  price:"₹13,799",
+                                                                                         picture:"/images/honor.jpg",
+                                                                                                       release:"2019",
+                                                                                      description:"Handset, Travel Charger, Warranty Card, Charging Cable, PC cover, SIM Ejecting Tool",
+                                                                                    review:"Very good phone with exciting performance.Must buy.",
+                                                                                    review1:"Beautiful phone"
+                                                                                                 },
+                                                                                              </table> -->
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
