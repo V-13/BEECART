@@ -255,6 +255,40 @@ app.post('/productdelete',(req,res)=>{
 });
 
 
+app.get('/readmore',(req,res)=>{
+    var item=req.query.q;
+
+    var result = ProductModel.findOne({_id:item},(error,data)=>{
+        if(error)
+        {
+            throw error;
+            res.send(error);                                            //api recieve data from database
+        }
+        else
+        {
+            res.send(data);
+        }
+    });
+});
+
+const APIurl4="http://localhost:4000/readmore"
+
+
+app.get('/more/:id',(req,res)=>{
+const x=req.params.id;
+    request(APIurl4+"/?q="+x,(error,response,body)=>{
+        var data=JSON.parse(body);
+        console.log(data)
+        res.render('more',{prod:data});
+
+    });
+    
+});
+
+
+
+
+
 
 
 

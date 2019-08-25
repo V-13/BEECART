@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <nav class="navbar navbar-dark bg-dark ">
+                <table>
+                    <tr>
+                    <%for(var i=0;i<nav.length;i++){%>
+                    <td><button type="button" class="btn btn-light">
+                     <a href="<%= nav[i].link%>"><%=nav[i].title%></a>
+                    </td> </button>  
+                   <%}%>
+                </tr>
+            </table>
+              </nav>
+      
+              <div class="card-columns p-5">       
+                    
+                        
+                        
+                        
+                             
+                        
+                        <div class="card text-black bg-white"  style="width: 20rem;">
+                               <img  src="<%=prod.picture%>" alt="Card image cap" style="width:30% ;height:30%">
+                               
+                         <div class="card-body">
+                         <h2><%=prod.model%></h2>
+                   
+                        <h5><%=prod.disp%></h5>
+                        <h6><%=prod.price%></h6>
+                        
+                         
+                         
+                        
+                     
+                      
+                         </div>       
+             </div>
+                        
+</div>
+             
+</body>
+</html>
